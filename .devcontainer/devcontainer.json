@@ -1,0 +1,27 @@
+{
+  "name": "postgres-sample-work",
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+  "service": "work",
+  "workspaceFolder": "/work",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.profiles.linux": {
+      "fish": {
+        "path": "/usr/bin/fish",
+        "args": ["-l"]
+      }
+    }
+  },
+  "extensions": [
+    "ckolkman.vscode-postgres",
+    "adpyke.vscode-sql-formatter",
+    "davidanson.vscode-markdownlint",
+    "irongeek.vscode-env",
+    "mhutchie.git-graph",
+    "ms-ceintl.vscode-language-pack-ja",
+    "esbenp.prettier-vscode",
+    "artdiniz.quitcontrol-vscode"
+  ],
+  "runServices": ["work", "db"],
+  "shutdownAction": "stopCompose"
+}

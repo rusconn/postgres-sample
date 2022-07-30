@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:${POSTGRES_IMAGE_TAG:-latest}
+    restart: always
+    working_dir: /db
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    volumes:
+      - ./data/dvdrental.tar:/db/dvdrental.tar
+      - ./init:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - ${POSTGRES_PORT:-5432}:5432
+
+volumes:
+  db-data:
