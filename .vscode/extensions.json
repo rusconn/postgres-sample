@@ -1,7 +1,7 @@
 {
   "recommendations": [
     "ckolkman.vscode-postgres",
-    "adpyke.vscode-sql-formatter",
+    "inferrinizzard.prettier-sql-vscode",
     "davidanson.vscode-markdownlint",
     "irongeek.vscode-env",
     "esbenp.prettier-vscode"
